@@ -1,0 +1,167 @@
+{
+    "customList": [
+        {
+            "prefix": "ng2Component",
+            "body": [
+                "import { Component, OnInit } from '@angular/core';",
+                "",
+                "@Component({",
+                "\tmoduleId: module.id,",
+                "\tselector: 'selector',",
+                "\ttemplateUrl: 'CustomName.component.html'",
+                "\tstyleUrls: 'CustomName.component.css'",
+                "})",
+                "export class CustomNameComponent implements OnInit {",
+                "\tconstructor() { }",
+                "",
+                "\tngOnInit() { }",
+                "}"
+            ]
+        },
+        {
+            "prefix": "ng2ComponentHTML",
+            "body": [
+                "<p>Sample Component text</p>"
+            ]
+        },
+        {
+            "prefix": "ng2ComponentCSS",
+            "body": [
+                ":host {",
+                "  flex: 1 1 100%;",
+                "  display: flex;",
+                "  flex-flow: column;",
+                "}"
+            ]
+        },
+        {
+            "prefix": "ng2Service",
+            "body": [
+                "import { Injectable } from '@angular/core';",
+                "",
+                "@Injectable()",
+                "export class CustomNameService {",
+                "\tconstructor() { }",
+                "}"
+            ]
+        },
+        {
+            "prefix": "ng2Pipe",
+            "body": [
+                "import { Pipe, PipeTransform } from '@angular/core';",
+                "",
+                "@Pipe({",
+                "\tname: 'name'",
+                "})",
+                "",
+                "export class CustomNamePipe implements PipeTransform {",
+                "\ttransform(value: any, args: any[]): any {",
+                "\t\t",
+                "\t}",
+                "}"
+            ]
+        },
+        {
+            "prefix": "ng2Routing",
+            "body": [
+                "import { NgModule } from '@angular/core';",
+                "import { Routes, RouterModule } from '@angular/router';",
+                "",
+                "import { NameComponent } from './name.component';",
+                "",
+                "const routes: Routes = [",
+                "  { path: 'path', component: NameComponent },",
+                "];",
+                "",
+                "@NgModule({",
+                "  imports: [RouterModule.for${Child|Root}(routes)],",
+                "  exports: [RouterModule],",
+                "})",
+                "export class CustomNameRoutingModule { }",
+                "",
+                "export const routedComponents = [NameComponent];"
+            ]
+        },
+        {
+            "prefix": "ng2HttpGet",
+            "body": [
+                "return this.http.get('url')",
+                "\t.map((response: Response) => response.json()${0});"
+            ]
+        },
+        {
+            "prefix": "ng2Subscribe",
+            "body": [
+                "this.service.function",
+                "\t.subscribe(arg => this.property = arg);"
+            ]
+        },
+        {
+            "prefix": "ng2Bootstrap",
+            "body": [
+                "import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';",
+                "",
+                "import { AppModule } from './app.module';",
+                "",
+                "platformBrowserDynamic().bootstrapModule(AppModule)",
+                "\t.then(success => console.log(`Bootstrap success`))",
+                "\t.catch(error => console.log(error));"
+            ]
+        },
+        {
+            "prefix": "ng2ComponentRoot",
+            "body": [
+                "import { Component } from '@angular/core';",
+                "",
+                "@Component({",
+                "\tmoduleId: module.id,",
+                "\tselector: 'my-app',",
+                "\ttemplate: `",
+                "\t\t<router-outlet></router-outlet>",
+                "\t\t`",
+                "})",
+                "export class CustomNameComponent { }"
+            ]
+        },
+        {
+            "prefix": "ng2ModuleRoot",
+            "body": [
+                "import { NgModule } from '@angular/core';",
+                "import { BrowserModule  } from '@angular/platform-browser';",
+                "import { HttpModule } from '@angular/http';",
+                "",
+                "import { AppComponent } from './app.component';",
+                "import { AppRoutingModule } from './app.routing'; //TODO: Create ${app}.routing",
+                "",
+                "@NgModule({",
+                "\timports: [",
+                "\t\tBrowserModule,",
+                "\t\tHttpModule,",
+                "\t",
+                "\t\tAppRoutingModule,",
+                "\t],",
+                "\tdeclarations: [AppComponent],",
+                "\tproviders: [/* TODO: Providers go here */],",
+                "\tbootstrap: [AppComponent],",
+                "})",
+                "export class CustomNameModule { }"
+            ]
+        },
+        {
+            "prefix": "ng2Module",
+            "body": [
+                "import { NgModule } from '@angular/core';",
+                "",
+                "import { NameComponent }   from './name.component';",
+                "",
+                "@NgModule({",
+                "\timports: [],",
+                "\texports: [],",
+                "\tdeclarations: [NameComponent],",
+                "\tproviders: [],",
+                "})",
+                "export class CustomNameModule { }"
+            ]
+        }
+    ]
+}
