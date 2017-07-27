@@ -29,7 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #"Modified"
 =======
-Neeha
-Hi this is my First branch!!
-new names are added....
->>>>>>> a316ba42b6f5c5efcbd6515cba598811e74ee961
+
